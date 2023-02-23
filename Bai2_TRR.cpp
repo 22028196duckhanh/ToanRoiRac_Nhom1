@@ -4,15 +4,15 @@ int main(){
 	int n,x;
 	cout << "Nhap do dai cua day: ";
 	cin >> n;
-	int arr[n];
+	int arr[n+1];
 	cout << "Nhap day: ";
-	for (int i=0; i<n;i++){
+	for (int i=1; i<=n;i++){
 		cin >> arr[i];
 	}
 	cout <<"Nhap so can tim: ";
 	cin >> x;
 	
-	int l=0,r=n-1;
+	int l=1,r=n;
 	int mid1, mid2;
 	while (l<r){
 		mid1 = l+(r-l)/3;
