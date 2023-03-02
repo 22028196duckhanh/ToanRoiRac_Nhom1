@@ -16,7 +16,10 @@ void extend_euclid(int a, int b,int &x,int&y){ // a > b
 }
 int main(){
 	int a, m,x,y; // tim nghich dao cua a modulo m
-	cin >> a >> m;
+	cout << "Nhap so can tim nghich dao: ";
+	cin >> a;
+	cout << "Nhap so modulo: ";
+	cin >> m;
 	if (a>m) {
 		extend_euclid(a,m,x,y);
 		cout << (x+m)%m;
