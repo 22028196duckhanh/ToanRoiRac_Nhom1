@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-int ones(string s, int pos){
-	if (pos < 0) return 0;
-	if (s[pos]=='1') return ones(s,pos-1)+1;
-	return ones(s,pos-1);
+int ones(string s){
+	if (s=="") return 0;
+	return ones(s.substr(0,s.length()-1)) + s[s.length()-1] - '0';	
 }
 int main(){
 	string s;
 	cin >> s;
-	int n = s.length();
-	cout << ones(s,n-1);
+	cout << ones(s);
 	return 0;
 }
